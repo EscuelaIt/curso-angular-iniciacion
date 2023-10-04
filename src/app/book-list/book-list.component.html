@@ -1,0 +1,10 @@
+<div *ngFor="let book of bookList">
+  <h2>Titulo: {{ book.title }}</h2>
+  <a title="book.title" [routerLink]="['/books', book.id]">Detalles</a>
+  <p>Autor {{ book.author }}</p>
+  <app-boton-barato
+    [price]="book.price"
+    (notify)="onNotify()"
+  ></app-boton-barato>
+</div>
+<p>-----------------------------------</p>
