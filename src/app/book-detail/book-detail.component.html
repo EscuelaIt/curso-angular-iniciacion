@@ -2,4 +2,6 @@
   <h2>Titulo: {{ book.title }}</h2>
   <p>Autor {{ book.author }}</p>
   <p>Precio {{ book.price | currency : "EUR" : true }}</p>
+  <app-soy-manual></app-soy-manual>
+  <button (click)="this.addToCar()">AddToCar</button>
 </div>

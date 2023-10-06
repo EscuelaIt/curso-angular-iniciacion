@@ -1,4 +1,4 @@
-<div *ngFor="let book of bookList">
+<div class="book" *ngFor="let book of bookList">
   <h2>Titulo: {{ book.title }}</h2>
   <a title="book.title" [routerLink]="['/books', book.id]">Detalles</a>
   <p>Autor {{ book.author }}</p>
@@ -6,5 +6,6 @@
     [price]="book.price"
     (notify)="onNotify()"
   ></app-boton-barato>
+  <app-soy-manual></app-soy-manual>
 </div>
 <p>-----------------------------------</p>
