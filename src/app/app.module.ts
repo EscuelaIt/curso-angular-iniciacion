@@ -13,6 +13,7 @@ import { EnlineaComponent } from './enlinea/enlinea.component';
 import { ConprefijoComponent } from './conprefijo/conprefijo.component';
 import { SoyManualComponent } from './soy-manual/soy-manual.component';
 import { CartComponent } from './cart/cart.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { CartComponent } from './cart/cart.component';
     SoyManualComponent,
     CartComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

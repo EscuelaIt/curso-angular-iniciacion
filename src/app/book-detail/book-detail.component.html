@@ -1,7 +1,18 @@
 <div class="book-component" *ngIf="book">
   <h2>Titulo: {{ book.title }}</h2>
-  <p>Autor {{ book.author }}</p>
+  <h3 [innerText]="miTextoH3"></h3>
+  <img width="40px" [src]="urlImage" />
+  <p [ngClass]="autorClass">Autor {{ book.author }}</p>
+  <p [class.NombreAutorBlue]="isTextoOriginal()">Autor {{ book.author }}</p>
   <p>Precio {{ book.price | currency : "EUR" : true }}</p>
+  <p>{{ interpolacionText }}</p>
+  <p>fecha de hoy: {{ fechaDeHoy | date }}</p>
+  <input [(ngModel)]="descripcionModificada" />
+  <p>Descripcion: {{ descripcionModificada }}</p>
   <app-soy-manual></app-soy-manual>
-  <button (click)="this.addToCar()">AddToCar</button>
+  <button (click)="addToCar()">AddToCar</button>
+  <button (click)="cambiarTexto()">CambiarTexto</button>
+  <button [disabled]="isDisabled()" (click)="cambiarIcono()">
+    CambiarIcono
+  </button>
 </div>
