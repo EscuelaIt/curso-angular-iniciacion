@@ -3,7 +3,11 @@ import { Book } from '../books';
 
 @Component({
   selector: 'app-boton-barato',
-  template: `<button *ngIf="price && price <= 10" (click)="notify.emit()">
+  template: `<button
+    class="book-component"
+    *ngIf="price && price <= 10"
+    (click)="notify.emit()"
+  >
     Barato
   </button>`,
   styles: [],

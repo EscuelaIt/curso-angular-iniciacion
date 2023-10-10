@@ -9,7 +9,7 @@ import {
 
 @Component({
   selector: 'app-soy-manual',
-  template: `<p class="myclass">SoyManualComponent works!!</p>`,
+  template: `<p class="myclass book-component">SoyManualComponent works!!</p>`,
   styles: [
     `
       .myclass {
