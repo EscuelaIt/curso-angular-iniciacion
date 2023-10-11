@@ -14,6 +14,7 @@ import { ConprefijoComponent } from './conprefijo/conprefijo.component';
 import { SoyManualComponent } from './soy-manual/soy-manual.component';
 import { CartComponent } from './cart/cart.component';
 import { FormsModule } from '@angular/forms';
+import { BookDetailRangeComponent } from './book-detail-range/book-detail-range.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FormsModule } from '@angular/forms';
     ConprefijoComponent,
     SoyManualComponent,
     CartComponent,
+    BookDetailRangeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

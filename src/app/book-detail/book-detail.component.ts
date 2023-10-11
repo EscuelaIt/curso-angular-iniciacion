@@ -23,12 +23,27 @@ export class BookDetailComponent implements OnInit {
   private urlIconoAzul =
     'https://icones.pro/wp-content/uploads/2022/07/icone-angulaire-bleu.png';
 
+  inputRangeValue: number = 30;
+  inputRangeSecondValue: number = 0;
+
   constructor(
     private readonly activatedRoute: ActivatedRoute,
     private bookService: BookService
   ) {
     this.count = 0;
     this.urlImage = this.urlIconoRojo;
+  }
+
+  onChangeInputRange(event: any) {
+    const target = event.target;
+    const value = (target as HTMLInputElement).value;
+    this.inputRangeValue = Number(value);
+    this.inputRangeSecondValue = Number(value);
+  }
+
+  onChangeInputRangeOther(value: number) {
+    this.inputRangeValue = value;
+    this.inputRangeSecondValue = value;
   }
 
   cambiarTexto() {

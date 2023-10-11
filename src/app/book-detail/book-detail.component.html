@@ -7,12 +7,30 @@
   <p>Precio {{ book.price | currency : "EUR" : true }}</p>
   <p>{{ interpolacionText }}</p>
   <p>fecha de hoy: {{ fechaDeHoy | date }}</p>
+
   <input [(ngModel)]="descripcionModificada" />
   <p>Descripcion: {{ descripcionModificada }}</p>
+
   <app-soy-manual></app-soy-manual>
   <button (click)="addToCar()">AddToCar</button>
   <button (click)="cambiarTexto()">CambiarTexto</button>
   <button [disabled]="isDisabled()" (click)="cambiarIcono()">
     CambiarIcono
   </button>
+
+  <p>---------------------------------------</p>
+  <h4>Rango: {{ inputRangeValue }}</h4>
+  <h4>Copia de Rango: {{ inputRangeSecondValue }}</h4>
+  <input
+    type="range"
+    min="1"
+    max="100"
+    (change)="onChangeInputRange($event)"
+    [value]="inputRangeValue"
+  />
+  <p>---------------------------------------</p>
+  <app-book-detail-range
+    [inputRangeValue]="inputRangeValue"
+    (inputRangeValueChange)="onChangeInputRangeOther($event)"
+  ></app-book-detail-range>
 </div>

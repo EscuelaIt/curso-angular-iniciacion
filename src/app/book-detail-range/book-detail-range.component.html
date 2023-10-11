@@ -1,0 +1,11 @@
+<h4>Input Range hijo:</h4>
+<p>El rango actual es: {{ inputRangeValue }}</p>
+<input
+  type="range"
+  min="1"
+  max="100"
+  [value]="inputRangeValue"
+  (change)="onChangeInputRange($event)"
+/>
+<button (click)="incRange()">Aumentar Rango</button>
+<button (click)="decRange()">Disminuir Rango</button>
