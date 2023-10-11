@@ -1,11 +1,34 @@
 <div class="book book-component" *ngFor="let book of bookList">
-  <h2>Titulo: {{ book.title }}</h2>
-  <a title="book.title" [routerLink]="['/books', book.id]">Detalles</a>
-  <p>Autor {{ book.author }}</p>
-  <app-boton-barato
-    [price]="book.price"
-    (notify)="onNotify()"
-  ></app-boton-barato>
-  <app-soy-manual></app-soy-manual>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ book.title | uppercase }}</mat-card-title>
+      <mat-card-subtitle>{{ book.author | lowercase }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p *ngFor="let bookProperty of book | keyvalue">
+        key: {{ bookProperty.key }}:{{ bookProperty.value }}
+      </p>
+      <hr />
+      {{ book | json }}
+      <p>
+        {{ 0.21 | percent }}
+      </p>
+      <p>Date: {{ currentDate | date : "long" }}</p>
+      <p>Price: {{ book.price | number : "3.1" | currency : "EUR" }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-button title="book.title" [routerLink]="['/books', book.id]"
+        >Detalles</a
+      >
+      <button color="primary" mat-button (click)="addToCar(book)">
+        AddToCar
+      </button>
+    </mat-card-actions>
+    <!--<app-boton-barato
+        [price]="book.price"
+        (notify)="onNotify()"
+      ></app-boton-barato>-->
+  </mat-card>
 </div>
 <p>-----------------------------------</p>

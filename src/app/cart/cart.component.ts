@@ -9,6 +9,8 @@ import { Book } from '../books';
 })
 export class CartComponent {
   books: Book[] = [];
+  // dataSource: Book[] = [];
+  displayedColumns: string[] = ['number', 'title', 'author', 'price'];
 
   constructor(private bookService: BookService) {
     this.books = this.bookService.getBooks();
