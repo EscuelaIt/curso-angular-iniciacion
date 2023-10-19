@@ -24,6 +24,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
+import { FechaFormateadaComponent } from './fecha-formateada/fecha-formateada.component';
+import { TemplateVarsComponent } from './template-vars/template-vars.component';
+import { TemplateVarsChildComponent } from './template-vars/template-vars-child/template-vars-child.component';
+import { ComponentProjectionsComponent } from './component-projections/component-projections.component';
+import { SingleSlotComponent } from './component-projections/single-slot/single-slot.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +45,11 @@ import { MatCardModule } from '@angular/material/card';
     CartComponent,
     BookDetailRangeComponent,
     NavigationComponent,
+    FechaFormateadaComponent,
+    TemplateVarsComponent,
+    TemplateVarsChildComponent,
+    ComponentProjectionsComponent,
+    SingleSlotComponent,
   ],
   imports: [
     BrowserModule,

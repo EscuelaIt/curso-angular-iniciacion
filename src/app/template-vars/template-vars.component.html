@@ -1,0 +1,22 @@
+<p>template-vars works!</p>
+<input #input_nombre />
+<button (click)="mostrarNombre(mi_hijo.nombre)">
+  Mostrar Nombre llamando a mi hijo
+</button>
+<p>----------------------------------------------</p>
+<h1>App-template-vars-child</h1>
+<app-template-vars-child #mi_hijo texto="Mi otro texto" />
+<p>----------------------------------------------</p>
+<h1>Formulario</h1>
+<form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+  <input type="text" ngModel id="name" name="name" required />
+  <button type="submit">Enviar</button>
+</form>
+<div [hidden]="!itemForm.form.valid">Soy valido</div>
+<div [hidden]="itemForm.form.valid">Soy invalido</div>
+
+<div *ngIf="canShow">
+  <input #otro_input />
+  Me muestro
+  <button [disabled]="!otro_input.value">Boton desactivado</button>
+</div>
