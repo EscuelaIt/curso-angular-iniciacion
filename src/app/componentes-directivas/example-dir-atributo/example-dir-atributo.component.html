@@ -1,0 +1,10 @@
+<div [ngClass]="isValid ? 'valid' : 'invalid'">Ejemplo ng class inline</div>
+<div [ngClass]="styleClassList">Ejemplo ng class desde el componente</div>
+<app-other-dir-atributo [isValid]="true"></app-other-dir-atributo>
+<app-other-dir-atributo [isValid]="false"></app-other-dir-atributo>
+
+<div [ngStyle]="{ 'font-size': 'large' }">
+  Otro ejemplo con ngStyle en linea
+</div>
+
+<div [ngStyle]="styleList">Ejemplo con estilos desde el componente</div>

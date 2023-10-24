@@ -1,0 +1,11 @@
+.principal {
+  color: green;
+}
+
+.con-fondo {
+  background-color: burlywood;
+}
+
+.con-borde {
+  border: 1px solid #000;
+}

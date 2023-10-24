@@ -29,6 +29,16 @@ import { TemplateVarsComponent } from './template-vars/template-vars.component';
 import { TemplateVarsChildComponent } from './template-vars/template-vars-child/template-vars-child.component';
 import { ComponentProjectionsComponent } from './component-projections/component-projections.component';
 import { SingleSlotComponent } from './component-projections/single-slot/single-slot.component';
+import { ExampleDirAtributoComponent } from './componentes-directivas/example-dir-atributo/example-dir-atributo.component';
+import { OtherDirAtributoComponent } from './componentes-directivas/example-dir-atributo/other-dir-atributo/other-dir-atributo.component';
+import { ExampleNgmodelComponent } from './componentes-directivas/example-ngmodel/example-ngmodel.component';
+import { ExampleDirStructComponent } from './componentes-directivas/example-dir-struct/example-dir-struct.component';
+import { SwitchCaseCaroComponent } from './componentes-directivas/example-dir-struct/switch-case-caro/switch-case-caro.component';
+import { SwitchCaseBaratoComponent } from './componentes-directivas/example-dir-struct/switch-case-barato/switch-case-barato.component';
+import { DirPersonalizadasComponent } from './componentes-directivas/dir-personalizadas/dir-personalizadas.component';
+import { HoverHighlightDirective } from './componentes-directivas/dir-personalizadas/directivas/hover-highlight.directive';
+import { TextColorHowComponentDirective } from './componentes-directivas/dir-personalizadas/directivas/text-color-how-component.directive';
+import { DblClickDirective } from './componentes-directivas/dir-personalizadas/directivas/dbl-click.directive';
 
 @NgModule({
   declarations: [
@@ -50,6 +60,16 @@ import { SingleSlotComponent } from './component-projections/single-slot/single-
     TemplateVarsChildComponent,
     ComponentProjectionsComponent,
     SingleSlotComponent,
+    ExampleDirAtributoComponent,
+    OtherDirAtributoComponent,
+    ExampleNgmodelComponent,
+    ExampleDirStructComponent,
+    SwitchCaseCaroComponent,
+    SwitchCaseBaratoComponent,
+    DirPersonalizadasComponent,
+    HoverHighlightDirective,
+    TextColorHowComponentDirective,
+    DblClickDirective,
   ],
   imports: [
     BrowserModule,

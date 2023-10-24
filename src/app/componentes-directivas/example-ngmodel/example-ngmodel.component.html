@@ -1,0 +1,32 @@
+<h1>Formulario sencillo</h1>
+<form #miformulario="ngForm" (ngSubmit)="enviarFormulario(miformulario)">
+  <p>Mi nombre es {{ nombre }}</p>
+  <input name="nombre" [(ngModel)]="nombre" />
+  <input name="email" [(ngModel)]="email" />
+  <button type="submit">Submit</button>
+</form>
+
+<h1>Formulario mas avanzado</h1>
+<form #miformulario2="ngForm" (ngSubmit)="enviarFormulario(miformulario2)">
+  <input
+    [ngStyle]="{ display: 'block' }"
+    name="nombre"
+    [(ngModel)]="nombre"
+    #nombreRef="ngModel"
+    required
+  />
+  <div *ngIf="nombreRef.invalid && (nombreRef.dirty || nombreRef.touched)">
+    El nombre es requerido
+  </div>
+  <input
+    [ngStyle]="{ display: 'block' }"
+    name="email"
+    [(ngModel)]="email"
+    #emailRef="ngModel"
+    email
+  />
+  <div *ngIf="emailRef.invalid && (emailRef.dirty || emailRef.touched)">
+    El email es requerido
+  </div>
+  <button [disabled]="miformulario2.invalid" type="submit">Submit</button>
+</form>

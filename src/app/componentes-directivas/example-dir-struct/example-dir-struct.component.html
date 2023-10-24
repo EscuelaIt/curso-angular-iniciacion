@@ -1,0 +1,34 @@
+<p *ngIf="1 < 2">Me muestro si 1 < 2</p>
+
+<ng-template [ngIf]="1 < 2">
+  <p>Me muestro si 1 < 2</p>
+</ng-template>
+
+<p *ngFor="let item of [1, 2, 3, 4]">{{ item }}</p>
+
+<ng-template ngFor let-item [ngForOf]="['aa', 'bb', 'cc', 'dd']">
+  <p>{{ item }}</p>
+</ng-template>
+<p>----------------------------------------</p>
+<p *ngFor="let item of ['aa', 'bb', 'cc', 'dd']; let i = index">
+  key:{{ i }} - value: {{ item }}
+</p>
+<p>----------------------------------------</p>
+<ng-container *ngIf="1 < 2">
+  <p *ngFor="let item of ['aa', 'bb', 'cc', 'dd']; let i = index">
+    key:{{ i }} - value: {{ item | uppercase }}
+  </p>
+</ng-container>
+<p>----------------------------------------</p>
+<p *ngFor="let item of ['aa', 'bb', 'cc', 'dd']; let i = index">
+  <ng-container *ngIf="i % 2 == 0">
+    key:{{ i }} - value: {{ item }}
+  </ng-container>
+</p>
+<p>----------------------------------------</p>
+<h3>Ejemplo con ngSwitch</h3>
+<div [ngSwitch]="mySwitchValue">
+  <app-switch-case-caro *ngSwitchCase="'A'"></app-switch-case-caro>
+  <app-switch-case-barato *ngSwitchCase="'B'"></app-switch-case-barato>
+  <p *ngSwitchDefault>Default</p>
+</div>
