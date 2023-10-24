@@ -39,6 +39,8 @@ import { DirPersonalizadasComponent } from './componentes-directivas/dir-persona
 import { HoverHighlightDirective } from './componentes-directivas/dir-personalizadas/directivas/hover-highlight.directive';
 import { TextColorHowComponentDirective } from './componentes-directivas/dir-personalizadas/directivas/text-color-how-component.directive';
 import { DblClickDirective } from './componentes-directivas/dir-personalizadas/directivas/dbl-click.directive';
+import { DateTimeModule } from './date-time/date-time.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -83,6 +85,8 @@ import { DblClickDirective } from './componentes-directivas/dir-personalizadas/d
     MatListModule,
     MatTableModule,
     MatCardModule,
+    DateTimeModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
